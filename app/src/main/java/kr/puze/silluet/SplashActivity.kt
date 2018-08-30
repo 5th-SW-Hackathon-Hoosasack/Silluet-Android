@@ -11,13 +11,18 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.LinearLayout
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
+
 class SplashActivity : AppCompatActivity() {
 
     lateinit var anim: Animation
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        FacebookSdk.sdkInitialize(applicationContext)
+        AppEventsLogger.activateApp(this@SplashActivity)
+        requestWindowFeature(Window.FEATURE_NO_TITLE)
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_splash)
         supportActionBar!!.hide()
@@ -37,7 +42,7 @@ class SplashActivity : AppCompatActivity() {
         }, 2500)
     }
 
-    private fun startAnimations(): Unit{
+    private fun startAnimations(): Unit {
         var animaLayout: ImageView = findViewById(R.id.layout_splash)
         anim = AnimationUtils.loadAnimation(this@SplashActivity, R.anim.alpha)
         anim.reset()
@@ -45,7 +50,7 @@ class SplashActivity : AppCompatActivity() {
         animaLayout.startAnimation(anim)
     }
 
-    private fun endAnimation(): Unit{
+    private fun endAnimation(): Unit {
         var animaLayout: ImageView = findViewById(R.id.layout_splash)
         anim = AnimationUtils.loadAnimation(this@SplashActivity, R.anim.disalpha)
         anim.reset()

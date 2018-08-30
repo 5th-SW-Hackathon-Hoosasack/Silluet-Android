@@ -13,13 +13,7 @@ class LoginActivity : AppCompatActivity() {
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_login)
         supportActionBar!!.hide()
-        button_login.setOnClickListener {
-            startActivity(Intent(this@LoginActivity, MainActivity::class.java))
-            finish()
-        }
-        button_register.setOnClickListener {
-            startActivity(Intent(this@LoginActivity, RegisterActivity::class.java))
-            finish()
-        }
+
+
     }
 }
