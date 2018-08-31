@@ -10,9 +10,9 @@ import android.view.WindowManager
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
-import android.widget.LinearLayout
 import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
+import com.kakao.auth.KakaoSDK
 
 class SplashActivity : AppCompatActivity() {
 

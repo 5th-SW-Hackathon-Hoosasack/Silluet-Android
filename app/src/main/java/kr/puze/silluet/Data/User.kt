@@ -1,3 +1,3 @@
 package kr.puze.silluet.Data
 
-data class User(var name: String, var image: String)
+data class User(var name: String, var imgUrl: String)

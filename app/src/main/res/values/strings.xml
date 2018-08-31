@@ -2,4 +2,5 @@
     <string name="app_name">Silluet</string>
     <string name="facebook_app_id">519364428508332</string>
     <string name="fb_login_protocol_scheme">fb519364428508332</string>
+    <string name="kakao_app_key">88cd274d2980cd8ed7f94f21d6a05a56</string>
 </resources>
